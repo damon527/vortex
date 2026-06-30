@@ -1,0 +1,38 @@
+
+  Source  Path:   ./src
+  Current Path:   /home/hhq/rough/Tool/interpolateField
+  Compiling Time: 2026-04-06 18:14:04
+
+  Which compiler do you use? 
+     1: Intel MPI (mpiifort)
+     2: gcc MPI   (mpif90). Default
+  gcc_MPI  will be used
+
+  Do you want to delete temporary compiling files? 
+     0: No, save them. 
+     1: Yes,delete them. Default
+  Please type a choice (0 or 1): 1
+  Choose to DELETE temporary compiling files
+
+  Which EXE do you want to compile? 
+     0: interpolateField, W/O  Scalar. Default
+     1: interpolateField, With Scalar
+  Please type a choice (0 or 1): 
+  interpolateField, W/O Scalar  will be compiled
+
+!==================*- Compiling begins -*=================!
+
+mpif90 -cpp -O3 -Wall -fbacktrace -g -ffree-line-length-none -mcmodel=large -funroll-loops -floop-optimize  -c m_Decomp2d.f90
+mpif90 -cpp -O3 -Wall -fbacktrace -g -ffree-line-length-none -mcmodel=large -funroll-loops -floop-optimize  -c m_TypeDef.f90
+mpif90 -cpp -O3 -Wall -fbacktrace -g -ffree-line-length-none -mcmodel=large -funroll-loops -floop-optimize  -c m_LogInfo.f90
+mpif90 -cpp -O3 -Wall -fbacktrace -g -ffree-line-length-none -mcmodel=large -funroll-loops -floop-optimize  -c m_Parameters.f90
+mpif90 -cpp -O3 -Wall -fbacktrace -g -ffree-line-length-none -mcmodel=large -funroll-loops -floop-optimize  -c m_MeshAndMetries.f90
+mpif90 -cpp -O3 -Wall -fbacktrace -g -ffree-line-length-none -mcmodel=large -funroll-loops -floop-optimize  -c m_BC_and_Halo.f90
+mpif90 -cpp -O3 -Wall -fbacktrace -g -ffree-line-length-none -mcmodel=large -funroll-loops -floop-optimize  -c m_Interp.f90
+mpif90 -cpp -O3 -Wall -fbacktrace -g -ffree-line-length-none -mcmodel=large -funroll-loops -floop-optimize  -c main.f90
+mpif90 -cpp -O3 -Wall -fbacktrace -g -ffree-line-length-none -mcmodel=large -funroll-loops -floop-optimize -o interpolateField  m_Decomp2d.o m_TypeDef.o m_LogInfo.o m_Parameters.o m_MeshAndMetries.o m_BC_and_Halo.o m_Interp.o main.o -lm
+
+interpolateField has been compiled normally. Enjoy !!!
+
+!===================*- Compiling ends -*==================!
+
